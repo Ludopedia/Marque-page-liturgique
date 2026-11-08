@@ -1,0 +1,6 @@
+{
+  "name": "Marque-pages Liturgiques pour Bible",
+  "description": "Générateur et imprimeur de doubles marque-pages liturgiques compacts pour Bible (8 par page A4, 1re lecture et Évangile séparés, calendrier AELF).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
