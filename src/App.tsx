@@ -11,8 +11,13 @@ import { MonthSelectorModal } from './components/MonthSelectorModal';
 import { PrintGuideModal } from './components/PrintGuideModal';
 import { BookmarkSlot, MonthData } from './types/lectionary';
 import { DEFAULT_MONTHS_DATA } from './data/defaultLiturgicalData';
-import { fetchMonthFromAELF, saveEditedMonth, resetMonthToDefault } from './services/aelfService';
-import { Info, Sparkles, Printer, Check } from 'lucide-react';
+import {
+  fetchMonthFromAELF,
+  saveEditedMonth,
+  resetMonthToDefault,
+  getStoredMonthKey,
+} from './services/aelfService';
+import { Printer } from 'lucide-react';
 
 export default function App() {
   const [selectedMonths, setSelectedMonths] = useState<string[]>([
@@ -23,10 +28,9 @@ export default function App() {
   ]);
 
   const [monthsDataMap, setMonthsDataMap] = useState<Record<string, MonthData>>(() => {
-    // Initialize with preloaded default data
     const initialMap: Record<string, MonthData> = {};
     Object.keys(DEFAULT_MONTHS_DATA).forEach((key) => {
-      const stored = localStorage.getItem(`custom_month_${key}`);
+      const stored = getStoredMonthKey(key);
       if (stored) {
         try {
           initialMap[key] = JSON.parse(stored);
@@ -53,26 +57,28 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [isCustomized, setIsCustomized] = useState(false);
 
-  // Load missing months if user picks months not already in dataMap
-  const loadMonths = useCallback(async (monthsToLoad: string[]) => {
-    setIsLoading(true);
-    const updatedMap = { ...monthsDataMap };
+  const loadMonths = useCallback(
+    async (monthsToLoad: string[]) => {
+      setIsLoading(true);
+      const updatedMap = { ...monthsDataMap };
 
-    for (const mKey of monthsToLoad) {
-      if (!updatedMap[mKey]) {
-        const [year, month] = mKey.split('-').map(Number);
-        try {
-          const data = await fetchMonthFromAELF(year, month);
-          updatedMap[mKey] = data;
-        } catch (err) {
-          console.error(`Error loading month ${mKey}:`, err);
+      for (const mKey of monthsToLoad) {
+        if (!updatedMap[mKey]) {
+          const [year, month] = mKey.split('-').map(Number);
+          try {
+            const data = await fetchMonthFromAELF(year, month);
+            updatedMap[mKey] = data;
+          } catch (err) {
+            console.error(`Error loading month ${mKey}:`, err);
+          }
         }
       }
-    }
 
-    setMonthsDataMap(updatedMap);
-    setIsLoading(false);
-  }, [monthsDataMap]);
+      setMonthsDataMap(updatedMap);
+      setIsLoading(false);
+    },
+    [monthsDataMap]
+  );
 
   useEffect(() => {
     const missing = selectedMonths.filter((m) => !monthsDataMap[m]);
@@ -112,7 +118,6 @@ export default function App() {
     return slots;
   }, [selectedMonths, monthsDataMap]);
 
-  // Handle in-place text edits on any reading
   const handleUpdateReading = (
     dateStr: string,
     field: 'firstReading' | 'secondReading' | 'gospel' | 'feast',
@@ -147,7 +152,6 @@ export default function App() {
     }
   };
 
-  // Reset readings back to standard lectionary
   const handleResetReadings = () => {
     const updated = { ...monthsDataMap };
     selectedMonths.forEach((mKey) => {
@@ -171,7 +175,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-200 text-stone-900 flex flex-col font-sans antialiased selection:bg-[#80182A]/20">
+    <div className="app-root min-h-screen bg-stone-200 text-stone-900 flex flex-col font-sans antialiased selection:bg-[#80182A]/20">
       {/* TOP NAVIGATION BAR */}
       <TopNav
         onOpenMonthSelector={() => setIsMonthModalOpen(true)}
@@ -196,10 +200,9 @@ export default function App() {
 
       {/* QUICK INSTRUCTION RIBBON */}
       <div className="no-print bg-[#162B4D]/5 border-b border-[#162B4D]/10 px-4 py-2 text-center text-xs text-stone-700 flex items-center justify-center gap-2 flex-wrap">
-        <span className="font-semibold text-[#162B4D]">✨ Prêt à imprimer :</span>
+        <span className="font-semibold text-[#162B4D]">Format optimisé plein A4 :</span>
         <span>
-          8 marque-pages compacts (4 colonnes × 2 rangées) • 1re Lecture en bordeaux, Évangile en bleu nuit •
-          Dimanches exclus.
+          8 marque-pages (5,1 × 14,5 cm) • Tous les jours du mois sur une seule ligne avec les solennités majeures.
         </span>
         <span className="text-stone-400">·</span>
         <button
@@ -220,7 +223,7 @@ export default function App() {
         />
       </main>
 
-      {/* FLOATING ACTION PILL FOR QUICK PRINT (MOBILE/DESKTOP) */}
+      {/* FLOATING ACTION PILL FOR QUICK PRINT */}
       <aside aria-label="Action d'impression" className="no-print fixed bottom-6 right-6 z-30 shadow-lg">
         <button
           onClick={handlePrint}

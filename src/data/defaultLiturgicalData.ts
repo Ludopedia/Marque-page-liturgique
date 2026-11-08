@@ -10,7 +10,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
     weeks: [
       {
         id: '2026-11-w1',
-        weekTitle: '31e sem. Temps Ordinaire',
+        weekTitle: '31e sem. T.O.',
         days: [
           {
             id: '2026-11-02',
@@ -40,7 +40,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 3,
             firstReading: 'Ph 2, 12-18',
             gospel: 'Lc 14, 25-33',
-            feast: 'S. Charles B.',
           },
           {
             id: '2026-11-05',
@@ -73,7 +72,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
       },
       {
         id: '2026-11-w2',
-        weekTitle: '32e sem. Temps Ordinaire',
+        weekTitle: '32e sem. T.O.',
         days: [
           {
             id: '2026-11-09',
@@ -84,7 +83,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             firstReading: 'Ez 47, 1-2.8-9.12',
             secondReading: '1 Co 3, 9-17',
             gospel: 'Jn 2, 13-22',
-            feast: 'Dédicace Latran',
+            feast: 'Latran',
           },
           {
             id: '2026-11-10',
@@ -94,7 +93,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 2,
             firstReading: 'Tt 2, 1-8.11-14',
             gospel: 'Lc 17, 7-10',
-            feast: 'S. Léon le Gd',
           },
           {
             id: '2026-11-11',
@@ -104,7 +102,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 3,
             firstReading: 'Tt 3, 1-7',
             gospel: 'Lc 17, 11-19',
-            feast: 'S. Martin',
           },
           {
             id: '2026-11-12',
@@ -114,7 +111,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 4,
             firstReading: 'Phm 7-20',
             gospel: 'Lc 17, 20-25',
-            feast: 'S. Josaphat',
           },
           {
             id: '2026-11-13',
@@ -138,7 +134,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
       },
       {
         id: '2026-11-w3',
-        weekTitle: '33e sem. Temps Ordinaire',
+        weekTitle: '33e sem. T.O.',
         days: [
           {
             id: '2026-11-16',
@@ -148,7 +144,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 1,
             firstReading: 'Ap 1, 1-4 ; 2, 1-5a',
             gospel: 'Lc 18, 35-43',
-            feast: 'Ste Marguerite',
           },
           {
             id: '2026-11-17',
@@ -158,7 +153,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 2,
             firstReading: 'Ap 3, 1-6.14-22',
             gospel: 'Lc 19, 1-10',
-            feast: 'Ste Élisabeth',
           },
           {
             id: '2026-11-18',
@@ -195,13 +189,12 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 6,
             firstReading: 'Ap 11, 4-12',
             gospel: 'Lc 20, 27-40',
-            feast: 'Présentation Vierge',
           },
         ],
       },
       {
         id: '2026-11-w4',
-        weekTitle: '34e sem. Temps Ordinaire',
+        weekTitle: '34e sem. T.O.',
         days: [
           {
             id: '2026-11-23',
@@ -211,7 +204,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 1,
             firstReading: 'Ap 14, 1-3.4b-5',
             gospel: 'Lc 21, 1-4',
-            feast: 'S. Clément',
           },
           {
             id: '2026-11-24',
@@ -221,7 +213,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 2,
             firstReading: 'Ap 14, 14-19',
             gospel: 'Lc 21, 5-11',
-            feast: 'Martyrs Vietnam',
           },
           {
             id: '2026-11-25',
@@ -231,7 +222,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 3,
             firstReading: 'Ap 15, 1-4',
             gospel: 'Lc 21, 12-19',
-            feast: 'Ste Catherine',
           },
           {
             id: '2026-11-26',
@@ -264,7 +254,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
       },
       {
         id: '2026-11-w5',
-        weekTitle: "1re sem. de l'Avent",
+        weekTitle: '1re sem. Avent',
         days: [
           {
             id: '2026-11-30',
@@ -274,7 +264,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 1,
             firstReading: 'Rm 10, 9-18',
             gospel: 'Mt 4, 18-22',
-            feast: 'S. André apôtre',
+            feast: 'S. André',
           },
         ],
       },
@@ -285,11 +275,11 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
     month: 12,
     monthLabel: 'DÉCEMBRE 2026',
     shortMonthLabel: 'Déc 2026',
-    liturgicalSeason: "Avent & Nativité du Seigneur",
+    liturgicalSeason: 'Avent & Nativité',
     weeks: [
       {
         id: '2026-12-w1',
-        weekTitle: "1re sem. de l'Avent",
+        weekTitle: '1re sem. Avent',
         days: [
           {
             id: '2026-12-01',
@@ -317,7 +307,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 4,
             firstReading: 'Is 26, 1-6',
             gospel: 'Mt 7, 21.24-27',
-            feast: 'S. François Xavier',
           },
           {
             id: '2026-12-04',
@@ -327,7 +316,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 5,
             firstReading: 'Is 29, 17-24',
             gospel: 'Mt 9, 27-31',
-            feast: 'S. Jean Damascène',
           },
           {
             id: '2026-12-05',
@@ -342,7 +330,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
       },
       {
         id: '2026-12-w2',
-        weekTitle: "2e sem. de l'Avent",
+        weekTitle: '2e sem. Avent',
         days: [
           {
             id: '2026-12-07',
@@ -352,7 +340,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 1,
             firstReading: 'Is 35, 1-10',
             gospel: 'Lc 5, 17-26',
-            feast: 'S. Ambroise',
           },
           {
             id: '2026-12-08',
@@ -363,7 +350,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             firstReading: 'Gn 3, 9-15.20',
             secondReading: 'Ep 1, 3-6.11-12',
             gospel: 'Lc 1, 26-38',
-            feast: 'Immaculée Conception',
+            feast: 'Imm. Conc.',
           },
           {
             id: '2026-12-09',
@@ -373,7 +360,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 3,
             firstReading: 'Is 40, 25-31',
             gospel: 'Mt 11, 28-30',
-            feast: 'S. Juan Diego',
           },
           {
             id: '2026-12-10',
@@ -383,7 +369,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 4,
             firstReading: 'Is 41, 13-20',
             gospel: 'Mt 11, 11-15',
-            feast: 'ND de Lorette',
           },
           {
             id: '2026-12-11',
@@ -393,7 +378,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 5,
             firstReading: 'Is 48, 17-19',
             gospel: 'Mt 11, 16-19',
-            feast: 'S. Damase',
           },
           {
             id: '2026-12-12',
@@ -403,13 +387,12 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 6,
             firstReading: 'Si 48, 1-4.9-11',
             gospel: 'Mt 17, 10-13',
-            feast: 'ND de Guadalupe',
           },
         ],
       },
       {
         id: '2026-12-w3',
-        weekTitle: "3e sem. de l'Avent",
+        weekTitle: '3e sem. Avent',
         days: [
           {
             id: '2026-12-14',
@@ -419,7 +402,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 1,
             firstReading: 'Nb 24, 2-7.15-17a',
             gospel: 'Mt 21, 23-27',
-            feast: 'S. Jean de la Croix',
           },
           {
             id: '2026-12-15',
@@ -470,7 +452,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
       },
       {
         id: '2026-12-w4',
-        weekTitle: '4e sem. Avent & Nativité',
+        weekTitle: '4e sem. Avent & Noël',
         days: [
           {
             id: '2026-12-21',
@@ -480,7 +462,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 1,
             firstReading: 'Ct 2, 8-14',
             gospel: 'Lc 1, 39-45',
-            feast: 'S. Pierre Canisius',
           },
           {
             id: '2026-12-22',
@@ -499,7 +480,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 3,
             firstReading: 'Ml 3, 1-4.23-24',
             gospel: 'Lc 1, 57-66',
-            feast: 'S. Jean de Kenty',
           },
           {
             id: '2026-12-24',
@@ -509,7 +489,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 4,
             firstReading: '2 S 7, 1-5.8-12.14.16',
             gospel: 'Lc 1, 67-79',
-            feast: 'Vigile de Noël',
           },
           {
             id: '2026-12-25',
@@ -520,7 +499,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             firstReading: 'Is 52, 7-10',
             secondReading: 'He 1, 1-6',
             gospel: 'Jn 1, 1-18',
-            feast: 'Noël - Nativité',
+            feast: 'Noël',
           },
           {
             id: '2026-12-26',
@@ -530,13 +509,12 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 6,
             firstReading: 'Ac 6, 8-10 ; 7, 54-60',
             gospel: 'Mt 10, 17-22',
-            feast: 'S. Étienne 1er martyr',
           },
         ],
       },
       {
         id: '2026-12-w5',
-        weekTitle: 'Octave de la Nativité',
+        weekTitle: 'Octave de Noël',
         days: [
           {
             id: '2026-12-28',
@@ -546,7 +524,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 1,
             firstReading: '1 Jn 1, 5 – 2, 2',
             gospel: 'Mt 2, 13-18',
-            feast: 'Saints Innocents',
           },
           {
             id: '2026-12-29',
@@ -556,7 +533,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 2,
             firstReading: '1 Jn 2, 3-11',
             gospel: 'Lc 2, 22-35',
-            feast: 'S. Thomas Becket',
           },
           {
             id: '2026-12-30',
@@ -575,7 +551,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 4,
             firstReading: '1 Jn 2, 18-21',
             gospel: 'Jn 1, 1-18',
-            feast: 'S. Sylvestre',
           },
         ],
       },
@@ -586,7 +561,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
     month: 1,
     monthLabel: 'JANVIER 2027',
     shortMonthLabel: 'Jan 2027',
-    liturgicalSeason: 'Temps de Noël & Temps Ordinaire',
+    liturgicalSeason: 'Temps de Noël & T.O.',
     weeks: [
       {
         id: '2027-01-w1',
@@ -601,7 +576,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             firstReading: 'Nb 6, 22-27',
             secondReading: 'Ga 4, 4-7',
             gospel: 'Lc 2, 16-21',
-            feast: 'Sainte Marie Mère de Dieu',
+            feast: 'Ste Marie',
           },
           {
             id: '2027-01-02',
@@ -611,13 +586,12 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 6,
             firstReading: '1 Jn 2, 22-28',
             gospel: 'Jn 1, 19-28',
-            feast: 'Ss Basile et Grégoire',
           },
         ],
       },
       {
         id: '2027-01-w2',
-        weekTitle: "Temps de l'Épiphanie",
+        weekTitle: 'Épiphanie',
         days: [
           {
             id: '2027-01-04',
@@ -654,7 +628,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 4,
             firstReading: '1 Jn 4, 19 – 5, 4',
             gospel: 'Lc 4, 14-22a',
-            feast: 'S. Raymond P.',
           },
           {
             id: '2027-01-08',
@@ -678,7 +651,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
       },
       {
         id: '2027-01-w3',
-        weekTitle: '1re sem. Temps Ordinaire',
+        weekTitle: '1re sem. T.O.',
         days: [
           {
             id: '2027-01-11',
@@ -706,7 +679,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 3,
             firstReading: 'He 2, 14-18',
             gospel: 'Mc 1, 29-39',
-            feast: 'S. Hilaire',
           },
           {
             id: '2027-01-14',
@@ -739,7 +711,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
       },
       {
         id: '2027-01-w4',
-        weekTitle: '2e sem. Temps Ordinaire',
+        weekTitle: '2e sem. T.O.',
         days: [
           {
             id: '2027-01-18',
@@ -749,7 +721,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 1,
             firstReading: 'He 5, 1-10',
             gospel: 'Mc 2, 18-22',
-            feast: 'Unité Chrétiens',
           },
           {
             id: '2027-01-19',
@@ -768,7 +739,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 3,
             firstReading: 'He 7, 1-3.15-17',
             gospel: 'Mc 3, 1-6',
-            feast: 'S. Sébastien',
           },
           {
             id: '2027-01-21',
@@ -778,7 +748,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 4,
             firstReading: 'He 7, 25 – 8, 6',
             gospel: 'Mc 3, 7-12',
-            feast: 'Ste Agnès',
           },
           {
             id: '2027-01-22',
@@ -788,7 +757,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 5,
             firstReading: 'He 8, 6-13',
             gospel: 'Mc 3, 13-19',
-            feast: 'S. Vincent',
           },
           {
             id: '2027-01-23',
@@ -803,7 +771,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
       },
       {
         id: '2027-01-w5',
-        weekTitle: '3e sem. Temps Ordinaire',
+        weekTitle: '3e sem. T.O.',
         days: [
           {
             id: '2027-01-25',
@@ -813,7 +781,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 1,
             firstReading: 'Ac 22, 3-16',
             gospel: 'Mc 16, 15-18',
-            feast: 'Conversion S. Paul',
+            feast: 'Conv. S. Paul',
           },
           {
             id: '2027-01-26',
@@ -823,7 +791,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 2,
             firstReading: '2 Tm 1, 1-8',
             gospel: 'Mc 3, 31-35',
-            feast: 'Ss Timothée et Tite',
           },
           {
             id: '2027-01-27',
@@ -833,7 +800,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 3,
             firstReading: 'He 10, 11-18',
             gospel: 'Mc 4, 1-20',
-            feast: 'Ste Angèle M.',
           },
           {
             id: '2027-01-28',
@@ -843,7 +809,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 4,
             firstReading: 'He 10, 19-25',
             gospel: 'Mc 4, 21-25',
-            feast: "S. Thomas d'Aquin",
           },
           {
             id: '2027-01-29',
@@ -876,7 +841,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
     weeks: [
       {
         id: '2027-02-w1',
-        weekTitle: '4e sem. Temps Ordinaire',
+        weekTitle: '4e sem. T.O.',
         days: [
           {
             id: '2027-02-01',
@@ -896,7 +861,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             firstReading: 'Ml 3, 1-4',
             secondReading: 'He 2, 14-18',
             gospel: 'Lc 2, 22-40',
-            feast: 'Présentation Seigneur',
+            feast: 'Présentation',
           },
           {
             id: '2027-02-03',
@@ -906,7 +871,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 3,
             firstReading: 'He 12, 4-7.11-15',
             gospel: 'Mc 6, 1-6',
-            feast: 'S. Blaise',
           },
           {
             id: '2027-02-04',
@@ -925,7 +889,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 5,
             firstReading: 'He 13, 1-8',
             gospel: 'Mc 6, 14-29',
-            feast: 'Ste Agathe',
           },
           {
             id: '2027-02-06',
@@ -935,7 +898,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 6,
             firstReading: 'He 13, 15-17.20-21',
             gospel: 'Mc 6, 30-34',
-            feast: 'S. Paul Miki',
           },
         ],
       },
@@ -951,7 +913,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 1,
             firstReading: 'Gn 1, 1-19',
             gospel: 'Mc 6, 53-56',
-            feast: 'Ste Joséphine B.',
           },
           {
             id: '2027-02-09',
@@ -971,7 +932,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             firstReading: 'Jl 2, 12-18',
             secondReading: '2 Co 5, 20 – 6, 2',
             gospel: 'Mt 6, 1-6.16-18',
-            feast: 'Mercredi des Cendres',
+            feast: 'Cendres',
           },
           {
             id: '2027-02-11',
@@ -981,7 +942,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 4,
             firstReading: 'Dt 30, 15-20',
             gospel: 'Lc 9, 22-25',
-            feast: 'ND de Lourdes',
           },
           {
             id: '2027-02-12',
@@ -1005,7 +965,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
       },
       {
         id: '2027-02-w3',
-        weekTitle: '1re sem. de Carême',
+        weekTitle: '1re sem. Carême',
         days: [
           {
             id: '2027-02-15',
@@ -1033,7 +993,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 3,
             firstReading: 'Jon 3, 1-10',
             gospel: 'Lc 11, 29-32',
-            feast: '7 Fondateurs',
           },
           {
             id: '2027-02-18',
@@ -1041,7 +1000,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayNumber: 18,
             dayLabel: 'Jeu 18',
             dayOfWeek: 4,
-            firstReading: 'Est 4, 17k.17m-17r',
+            firstReading: 'Est 4, 17k-17r',
             gospel: 'Mt 7, 7-12',
           },
           {
@@ -1066,7 +1025,7 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
       },
       {
         id: '2027-02-w4',
-        weekTitle: '2e sem. de Carême',
+        weekTitle: '2e sem. Carême',
         days: [
           {
             id: '2027-02-22',
@@ -1086,7 +1045,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 2,
             firstReading: 'Is 1, 10.16-20',
             gospel: 'Mt 23, 1-12',
-            feast: 'S. Polycarpe',
           },
           {
             id: '2027-02-24',
@@ -1123,7 +1081,6 @@ export const DEFAULT_MONTHS_DATA: Record<string, MonthData> = {
             dayOfWeek: 6,
             firstReading: 'Mi 7, 14-15.18-20',
             gospel: 'Lc 15, 1-3.11-32',
-            feast: 'S. Grégoire Narek',
           },
         ],
       },

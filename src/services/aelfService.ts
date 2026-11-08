@@ -32,6 +32,8 @@ const MONTHS_SHORT_FR = [
   'Déc',
 ];
 
+const STORAGE_PREFIX = 'custom_month_v2_';
+
 interface AelfLecture {
   type: string;
   ref?: string;
@@ -62,7 +64,7 @@ export async function fetchMonthFromAELF(
   const monthKey = `${year}-${String(month).padStart(2, '0')}`;
 
   // Check custom storage first
-  const stored = localStorage.getItem(`custom_month_${monthKey}`);
+  const stored = localStorage.getItem(`${STORAGE_PREFIX}${monthKey}`);
   if (stored) {
     try {
       return JSON.parse(stored);
@@ -71,7 +73,7 @@ export async function fetchMonthFromAELF(
     }
   }
 
-  // If in default pre-computed data and not forcing AELF, return copy
+  // If in default pre-computed data, return copy
   if (DEFAULT_MONTHS_DATA[monthKey]) {
     return JSON.parse(JSON.stringify(DEFAULT_MONTHS_DATA[monthKey]));
   }
@@ -118,8 +120,27 @@ export async function fetchMonthFromAELF(
       if (res.ok) {
         const data: AelfResponse = await res.json();
         const infoFete = data.informations?.fete || '';
-        if (infoFete && !infoFete.toLowerCase().includes('féride') && !infoFete.toLowerCase().includes('semaine')) {
-          feast = infoFete.split(',')[0].replace('Saint', 'S.').replace('Sainte', 'Ste').slice(0, 22);
+        const degre = (data.informations?.degre || '').toLowerCase();
+
+        // Only keep major feasts (Solennité or Fête), ignore Mémoires
+        const isMajorFeast =
+          degre.includes('solennit') ||
+          degre.includes('fête') ||
+          degre.includes('fete') ||
+          infoFete.toLowerCase().includes('cendres') ||
+          infoFete.toLowerCase().includes('défunts');
+
+        if (
+          isMajorFeast &&
+          infoFete &&
+          !infoFete.toLowerCase().includes('férie') &&
+          !infoFete.toLowerCase().includes('semaine')
+        ) {
+          feast = infoFete
+            .split(',')[0]
+            .replace('Saint', 'S.')
+            .replace('Sainte', 'Ste')
+            .slice(0, 14);
         }
 
         const messe = data.messes && data.messes[data.messes.length - 1];
@@ -132,7 +153,6 @@ export async function fetchMonthFromAELF(
         }
       }
     } catch {
-      // Fallback placeholder if offline/blocked
       firstReading = 'Lecture du jour';
       gospel = 'Évangile du jour';
     }
@@ -166,11 +186,10 @@ export async function fetchMonthFromAELF(
     weeks,
   };
 
-  // Cache in localStorage
   try {
-    localStorage.setItem(`custom_month_${monthKey}`, JSON.stringify(result));
+    localStorage.setItem(`${STORAGE_PREFIX}${monthKey}`, JSON.stringify(result));
   } catch {
-    // quota exceeded or private browsing
+    // ignore
   }
 
   return result;
@@ -179,7 +198,7 @@ export async function fetchMonthFromAELF(
 export function saveEditedMonth(monthData: MonthData): void {
   const monthKey = `${monthData.year}-${String(monthData.month).padStart(2, '0')}`;
   try {
-    localStorage.setItem(`custom_month_${monthKey}`, JSON.stringify(monthData));
+    localStorage.setItem(`${STORAGE_PREFIX}${monthKey}`, JSON.stringify(monthData));
   } catch {
     // ignore
   }
@@ -187,9 +206,13 @@ export function saveEditedMonth(monthData: MonthData): void {
 
 export function resetMonthToDefault(year: number, month: number): MonthData | null {
   const monthKey = `${year}-${String(month).padStart(2, '0')}`;
-  localStorage.removeItem(`custom_month_${monthKey}`);
+  localStorage.removeItem(`${STORAGE_PREFIX}${monthKey}`);
   if (DEFAULT_MONTHS_DATA[monthKey]) {
     return JSON.parse(JSON.stringify(DEFAULT_MONTHS_DATA[monthKey]));
   }
   return null;
+}
+
+export function getStoredMonthKey(monthKey: string): string | null {
+  return localStorage.getItem(`${STORAGE_PREFIX}${monthKey}`);
 }
